@@ -8,6 +8,4 @@ recipe webiste milestone project
 4. it will have  a ability to print the page.
 5. it will have a card that shows the rundown and work as a link for the recipe page
 
-
-
-![rough layout](/assets/quick_layout.jpg "rough layout")
+images will be in mockup folder
