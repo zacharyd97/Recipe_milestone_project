@@ -21,7 +21,7 @@ app.use(methodOverride('_method'))
  app.use('/recipes', recipeController)
 
  app.get('*', (req, res) => {
-    res.send('404')
+    res.render('error404')
   })
 
  app.listen(process.env.PORT)
