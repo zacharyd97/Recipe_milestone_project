@@ -1,18 +1,16 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Cuisines', {
-      id: {
+    await queryInterface.createTable('cuisines', {
+      cuisine_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      cuisine_id: {
-        type: Sequelize.INTEGER
-      },
       cuisine_name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       image_url: {
         type: Sequelize.STRING
@@ -28,6 +26,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Cuisines');
+    await queryInterface.dropTable('cuisines');
   }
 };

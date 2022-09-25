@@ -13,15 +13,15 @@ app.use(methodOverride('_method'))
 
 //controllers & routes
 
- app.get("/", (req, res) => {
-    res.send('hello world')
- })
+app.get("/", (req, res) => {
+   res.send('hello world')
+})
 
- const recipeController = require('./controllers/recipes_controller')
- app.use('/recipes', recipeController)
+const recipeController = require('./controllers/recipes_controller')
+app.use('/recipes', recipeController)
 
- app.get('*', (req, res) => {
-    res.render('error404')
-  })
+app.get('*', (req, res) => {
+   res.render('error404')
+})
 
- app.listen(process.env.PORT)
+app.listen(process.env.PORT)

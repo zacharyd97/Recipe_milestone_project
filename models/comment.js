@@ -14,11 +14,27 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Comment.init({
-    comment_id: DataTypes.INTEGER,
-    recipe_id: DataTypes.INTEGER,
-    author: DataTypes.STRING,
-    comment_text: DataTypes.TEXT,
-    likes: DataTypes.INTEGER
+    comment_id: {
+      types: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    recipe_id: {
+      types: DataTypes.INTEGER,
+      allowNull: false
+    },
+    author: {
+      types: DataTypes.STRING,
+      allowNull: false
+    },
+    comment_text: {
+      types: DataTypes.TEXT,
+      allowNull: false
+    },
+    likes: {
+      types: DataTypes.INTEGER,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'Comment',
