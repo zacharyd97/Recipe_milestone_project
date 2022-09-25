@@ -10,4 +10,4 @@ recipe webiste milestone project
 
 images will be in mockup folder
 
-![alt tag](https://github.com/zacharyd97/Recipe_milestone_project/tree/main/mockup/Recipe_ERD.JPG)
+![ERD Diagram](https://github.com/zacharyd97/Recipe_milestone_project/tree/main/mockup/Recipe_ERD.JPG)
