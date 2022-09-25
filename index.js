@@ -17,5 +17,11 @@ app.use(methodOverride('_method'))
     res.send('hello world')
  })
 
+ const recipeController = require('./controllers/recipes_controller')
+ app.use('/recipes', recipeController)
+
+ app.get('*', (req, res) => {
+    res.send('404')
+  })
 
  app.listen(process.env.PORT)
