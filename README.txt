@@ -9,3 +9,5 @@ recipe webiste milestone project
 5. it will have a card that shows the rundown and work as a link for the recipe page
 
 images will be in mockup folder
+
+![alt tag](https://github.com/zacharyd97/Recipe_milestone_project/tree/main/mockup/Recipe_ERD.JPG)
