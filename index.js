@@ -14,7 +14,7 @@ app.use(methodOverride('_method'))
 //controllers & routes
 
  app.get("/", (req, res) => {
-    res.send('hello world')
+    res.render('home')
  })
 
  const recipeController = require('./controllers/recipes_controller')
