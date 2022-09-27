@@ -3,62 +3,47 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Recipe extends Model {
+  class Ingredient extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Cuisine, Comment, Ingredient }) {
-
-      // cuisine
-      Recipe.belongsTo(Cuisine, {
-        foreignKey: "cuisine_id",
-        as: "cuisine"
-      })
-
-      // comment
-      Recipe.hasMany(Comment, {
+    static associate({ Recipe }) {
+      // recipe
+      Ingredient.belongsTo(Recipe, {
         foreignKey: "recipe_id",
-        as: "comments"
-      })
-
-      //ingredient
-      Recipe.hasMany(Ingredient, {
-        foreignKey: "recipe_id",
-        as: "ingredients"
+        as: "recipe"
       })
     }
   }
-  Recipe.init({
-    recipe_id: {
+  Ingredient.init({
+    ingredient_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
-    cuisine_id: {
+    recipe_id: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    author: {
+    amount: {
+      type: DataTypes.SMALLINT,
+      allowNull: false
+    },
+    unit: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    image_url: {
-      type: DataTypes.STRING,
-    },
-    description: {
-      type: DataTypes.TEXT,
-    },
-    directions: {
+    ingredient_name: {
       type: DataTypes.TEXT,
       allowNull: false
-    },
+    }
   }, {
     sequelize,
-    modelName: 'Recipe',
-    tableName: 'recipes',
+    modelName: 'Ingredient',
+    tableName: 'ingredients',
     timestamps: false
   });
-  return Recipe;
+  return Ingredient;
 };
