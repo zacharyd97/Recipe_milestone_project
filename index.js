@@ -13,15 +13,9 @@ app.use(methodOverride('_method'))
 
 //controllers & routes
 
-<<<<<<< HEAD
- app.get("/", (req, res) => {
-    res.render('home')
- })
-=======
 app.get("/", (req, res) => {
-   res.send('hello world')
+   res.redirect('home')
 })
->>>>>>> 4aaec3eabf26cddd3f0c00679e530cfef09dd879
 
 const recipeController = require('./controllers/recipes_controller')
 app.use('/recipes', recipeController)
