@@ -9,35 +9,42 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
+    static associate({ Recipe }) {
       // define association here
+
+      Comment.belongsTo(Recipe, {
+        foreignKey: "recipe_id",
+        as: "recipe"
+      })
     }
   }
   Comment.init({
     comment_id: {
-      types: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
     },
     recipe_id: {
-      types: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
     author: {
-      types: DataTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     comment_text: {
-      types: DataTypes.TEXT,
+      type: DataTypes.TEXT,
       allowNull: false
     },
     likes: {
-      types: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false
     },
   }, {
     sequelize,
     modelName: 'Comment',
+    tableName: 'comments',
+    timestamps: false
   });
   return Comment;
 };
