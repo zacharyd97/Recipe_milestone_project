@@ -1,6 +1,6 @@
 import { react } from '@babel/types'
 import React from 'react'
-import Def from './default'
+import Def from '../default'
 
 function error404 () {
     return (
