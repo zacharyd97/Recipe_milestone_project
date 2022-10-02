@@ -1,0 +1,21 @@
+
+a {
+  background-color: #606060;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 5px;
+  border-radius: 15%;
+  
+}
+.Home {
+  background-color: #003300;
+  color: #ffffcc;
+  height: 3em;
+  text-align: center;
+}
+/* body {
+  background-color: #ffffcc;
+  height: 10em;
+} */
