@@ -1,7 +1,7 @@
 
 const cuisines = require('express').Router()
 const db = require('../models')
-const {Cuisine} = db
+const { Cuisine, Recipe } = db
 
 
 cuisines.get('/', async (req, res) => {
@@ -13,10 +13,11 @@ cuisines.get('/', async (req, res) => {
         res.status(500).json(error)
     }
 })
-cuisines.get('/:id', async (req,res) => {
+cuisines.get('/:id', async (req, res) => {
     try {
         const foundCuisine = await Cuisine.findOne({
-            where: {cuisine_id: req.params.id}
+            where: { cuisine_id: req.params.id },
+            include: { model: Recipe, as: "recipes" }
         })
         console.log(foundCuisine)
         res.status(200).json(foundCuisine)
@@ -32,7 +33,7 @@ cuisines.post('/', async (req, res) => {
             message: 'Successfully inserted a new food',
             data: newCuisine
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -47,7 +48,7 @@ cuisines.put('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully updated ${updatedCuisine}`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })
@@ -63,7 +64,7 @@ cuisines.delete('/:id', async (req, res) => {
         res.status(200).json({
             message: `Successfully deleted ${deleteCuisine}`
         })
-    } catch(err) {
+    } catch (err) {
         res.status(500).json(err)
     }
 })

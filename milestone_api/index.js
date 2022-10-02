@@ -1,5 +1,5 @@
 const express = require('express')
-const {Sequelize} = require('sequelize')
+const { Sequelize } = require('sequelize')
 const cors = require('cors')
 const app = express()
 
@@ -21,6 +21,15 @@ app.get('/', (req, res) => {
 // CONTROLLERS 
 const cuisineController = require('./controllers/cuisine_controller')
 app.use('/cuisine', cuisineController)
+
+const recipeController = require('./controllers/recipe_controller')
+app.use('/recipe', recipeController)
+
+const commentController = require('./controllers/comment_controller')
+app.use('/comment', commentController)
+
+const ingredientController = require('./controllers/ingredient_controller')
+app.use('/ingredient', ingredientController)
 
 
 // LISTEN
