@@ -18,12 +18,12 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Navbar.Brand href="/">
-            <Link to="/">Home</Link>
+            <Link to="/" style={{textDecoration: 'none', color: '#ffffcc', fontSize: '1em'}}>Home</Link>
           </Navbar.Brand>
           
           <Nav className="me-auto" >
             <Nav.Link >
-              <Link to="/Cuisine">Cuisine</Link>
+              <Link to="/Cuisine"style={{textDecoration: 'none', color: '#ffffcc', fontSize: '1em'}}>Cuisine</Link>
             </Nav.Link>
           </Nav>
           </Navbar.Collapse>
@@ -31,8 +31,6 @@ function App() {
       </Navbar>
       </header>
    
-        
-       
       <div className='display'>
         <Routes>
           <Route path='/' element={<Home/>} />
