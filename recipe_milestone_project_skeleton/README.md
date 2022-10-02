@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+by bradley, zach and caleb\
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+recipe webiste milestone project
 
-## Available Scripts
+1. it will hold recipes and allow for creation editing and deletion of recipies
+2. it will alow for comments on recipes 
+3. it will have a comment section for recipes 
+4. it will have  a ability to print the page.
+5. it will have a card that shows the rundown and work as a link for the recipe page
 
-In the project directory, you can run:
+images will be in mockup folder
 
 ### `npm start`
 
@@ -68,3 +72,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Photo Credits
+**LETTUCE**
+Photo by <a href="https://unsplash.com/@redredorange?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mery Khachatryan</a> on <a href="https://unsplash.com/t/food-drink?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+**SOUP**
+Photo by <a href="https://unsplash.com/@visucy">Nathalie Jolie</a> on <a href="https://images.unsplash.com/photo-1519202270721-a737823482cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80">Unsplash</a>
+
+**RAW NOODLES+ COOKED NOODLES**
+Photo by <a href="https://unsplash.com/@brunabranco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bruna Branco</a> on <a href="https://unsplash.com/s/photos/homemade-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+**BREAKFAST FOR TWO**
+Photo by <a href="https://unsplash.com/@mbinnig?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marvin Binnig</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+**CINNAMON BUNS**
+Photo by <a href="https://unsplash.com/@otto_norin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Otto Norin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+**PIZZA ON PLATE**
+Photo by <a href="https://unsplash.com/@pinarimsi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pinar Kucuk</a> on <a href="https://unsplash.com/s/photos/homemade-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+**PANCAKES**
+Photo by <a href="https://unsplash.com/@pinarimsi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pinar Kucuk</a> on <a href="https://unsplash.com/s/photos/homemade-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+**STRAWBERRY CUPCAKES**
+Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deva Williamson</a> on <a href="https://unsplash.com/s/photos/homemade-food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+**SMOOTHIE**
+Photo by <a href="https://unsplash.com/@louishansel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Louis Hansel</a> on <a href="https://unsplash.com/s/photos/homemade-drinks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
