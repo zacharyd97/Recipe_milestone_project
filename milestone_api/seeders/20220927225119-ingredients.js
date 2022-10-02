@@ -11,7 +11,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('Ingredient', [
+    await queryInterface.bulkInsert('ingredients', [
       {
         recipe_id: 1,
         amount: 1,
@@ -59,6 +59,6 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
 
-    await queryInterface.bulkDelete('Ingredient', null, {})
+    await queryInterface.bulkDelete('ingredients', null, {})
   }
 };
