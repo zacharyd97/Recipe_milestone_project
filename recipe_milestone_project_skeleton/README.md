@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+by bradley, zach and caleb\
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+recipe webiste milestone project
 
-## Available Scripts
+1. it will hold recipes and allow for creation editing and deletion of recipies
+2. it will alow for comments on recipes 
+3. it will have a comment section for recipes 
+4. it will have  a ability to print the page.
+5. it will have a card that shows the rundown and work as a link for the recipe page
 
-In the project directory, you can run:
+images will be in mockup folder
 
 ### `npm start`
 
