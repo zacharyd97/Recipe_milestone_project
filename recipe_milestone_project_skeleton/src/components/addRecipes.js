@@ -82,12 +82,22 @@ function AddRecipes() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="cuisines">decscription</label>
+					<label htmlFor="cuisines">directions</label>
 					<input
 						value={recipe.directions}
 						onChange={e => setRecipe({ ...recipe, directions: e.target.value })}
 						className="form-control"
 						id="cuisines" name="cuisines" required />
+				</div>
+                <div className="form-group">
+					<label htmlFor="state">recipe id</label>
+					<input
+						value={recipe.recipe_id}
+						onChange={e => setRecipe({ ...recipe, recipe_id: e.target.value })}
+						className="form-control"
+						id="state"
+						name="state"
+					/>
 				</div>
 				<input className="btn btn-primary" type="submit" value="Add recipe" />
 			</form>
