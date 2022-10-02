@@ -1,24 +1,32 @@
 const recipes = require('express').Router()
 const db = require('../models')
-const { Cuisine } = db
+const { Recipe, Comment, Ingredient } = db
 
 
 recipes.get('/', async (req, res) => {
     try {
-        const foundCuisine = await Cuisine.findAll()
-        console.log(foundCuisine)
-        res.status(200).json(foundCuisine)
+        const foundRecipe = await Recipe.findAll()
+        console.log(foundRecipe)
+        res.status(200).json(foundRecipe)
     } catch (error) {
         res.status(500).json(error)
     }
 })
 recipes.get('/:id', async (req, res) => {
     try {
-        const foundCuisine = await Cuisine.findOne({
-            where: { cuisine_id: req.params.id }
+        const foundRecipe = await Recipe.findOne({
+            where: { recipe_id: req.params.id },
+            include: [
+                {
+                    model: Comment, as: "comments"
+                },
+                // {
+                //     model: Ingredient, as: 'ingredients'
+                // }
+            ]
         })
-        console.log(foundCuisine)
-        res.status(200).json(foundCuisine)
+        console.log(foundRecipe)
+        res.status(200).json(foundRecipe)
     } catch (error) {
         res.status(500).json(error)
     }
@@ -26,10 +34,10 @@ recipes.get('/:id', async (req, res) => {
 
 recipes.post('/', async (req, res) => {
     try {
-        const newCuisine = await Cuisine.create(req.body)
+        const newRecipe = await Recipe.create(req.body)
         res.status(200).json({
-            message: 'Successfully inserted a new food',
-            data: newCuisine
+            message: 'Successfully inserted a new recipe',
+            data: newRecipe
         })
     } catch (err) {
         res.status(500).json(err)
@@ -38,13 +46,13 @@ recipes.post('/', async (req, res) => {
 
 recipes.put('/:id', async (req, res) => {
     try {
-        const updatedCuisine = await Cuisine.update(req.body, {
+        const updatedRecipe = await Recipe.update(req.body, {
             where: {
-                cuisine_id: req.params.id
+                recipe_id: req.params.id
             }
         })
         res.status(200).json({
-            message: `Successfully updated ${updatedCuisine}`
+            message: `Successfully updated ${updatedRecipe}`
         })
     } catch (err) {
         res.status(500).json(err)
@@ -54,13 +62,13 @@ recipes.put('/:id', async (req, res) => {
 
 recipes.delete('/:id', async (req, res) => {
     try {
-        const deleteCuisine = await Cuisine.destroy({
+        const deleteRecipe = await Recipe.destroy({
             where: {
-                cuisine_id: req.params.id
+                recipe_id: req.params.id
             }
         })
         res.status(200).json({
-            message: `Successfully deleted ${deleteCuisine}`
+            message: `Successfully deleted ${deleteRecipe}`
         })
     } catch (err) {
         res.status(500).json(err)
