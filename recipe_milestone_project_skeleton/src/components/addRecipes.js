@@ -1,8 +1,14 @@
+import {useState} from "react"
 
+function AddRecipes() {
 
-function addRecipe() {
- <h1> addRecipe page</h1>
+    
+    return (
+        <div>
+            <h1> addRecipe page</h1>
+        </div>
+    )
 }
 
 
-export default addRecipe
+export default AddRecipes
