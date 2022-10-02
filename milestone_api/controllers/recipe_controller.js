@@ -20,9 +20,9 @@ recipes.get('/:id', async (req, res) => {
                 {
                     model: Comment, as: "comments"
                 },
-                // {
-                //     model: Ingredient, as: 'ingredients'
-                // }
+                {
+                    model: Ingredient, as: 'ingredients'
+                }
             ]
         })
         console.log(foundRecipe)
