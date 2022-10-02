@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import './App.css';
 import Recipes from './components/Recipes';
 import Home from './components/Home';
-
+import addRecipe from './components/addRecipes';
 
 function App() {
 
@@ -22,6 +22,10 @@ function App() {
             <Nav.Link >
               <Link to="/Recipes">Recipes</Link>
             </Nav.Link>
+            <Nav.Link >
+              <Link to="/addRecipe">add page</Link>
+            </Nav.Link>
+
           </Nav>
         </Container>
       </Navbar>
@@ -31,6 +35,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/Recipes' element={<Recipes/>} />
+          <Route path='/addPage' element={<addRecipe/>} />
         </Routes>
       </div>
       </Router>
