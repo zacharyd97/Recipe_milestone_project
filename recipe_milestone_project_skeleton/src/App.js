@@ -8,7 +8,7 @@ import AddRecipes from './components/addRecipes';
 import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
 
-
+export default App;
 function App() {
 
   return (
@@ -43,8 +43,8 @@ function App() {
           <Route path='/cuisine' element={<Cuisine/>} />
         </Routes>
       </div>
-      </Router>)
+      </Router>
       ;
-}
+</div>) 
 
-export default App;
+}
