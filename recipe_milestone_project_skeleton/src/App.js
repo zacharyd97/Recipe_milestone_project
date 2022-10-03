@@ -11,28 +11,28 @@ import Cuisine from './components/Cuisine';
 function App() {
 
   return (
-    <div className="App">
       <Router>
-        <header>
-      <Navbar bg="dark" expand="lg" variant="dark">
+      <div className="App"></div>
+        <Navbar bg="dark" expand="sm" variant="dark">
         <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Navbar.Brand href="/">
-            <Link to="/" style={{textDecoration: 'none', color: '#ffffcc', fontSize: '1em'}}>Home</Link>
+            <Link to="/" style={{textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%'}}>Home</Link>
           </Navbar.Brand>
           <Nav className="me-auto" >
             <Nav.Link >
-              <Link to="/Cuisine"style={{textDecoration: 'none', color: '#ffffcc', fontSize: '1em'}}>Cuisine</Link>
+              <Link to="/Cuisine" style={{textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%'}}>Cuisine</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/addRecipes">Add Recipes</Link>
+              <Link to="/addRecipes" style={{textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%'}}>Add Recipes</Link>
             </Nav.Link>
+            
           </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      </header>
+      
    
       <div className='display'>
         <Routes>
@@ -41,9 +41,8 @@ function App() {
           <Route path='/cuisine' element={<Cuisine/>} />
         </Routes>
       </div>
-      </Router>;
-    </div>
-  );
+      </Router>)
+      ;
 }
 
 export default App;
