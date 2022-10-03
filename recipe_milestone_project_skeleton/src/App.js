@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav'
 import './App.css';
 import Home from './components/Home';
 import Cuisine from './components/Cuisine';
+import ShowCuisine from './components/ShowCuisine';
 
 
 function App() {
@@ -13,30 +14,31 @@ function App() {
     <div className="App">
       <Router>
         <header>
-      <Navbar bg="dark" expand="lg" variant="dark">
-        <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Navbar.Brand href="/">
-            <Link to="/" style={{textDecoration: 'none', color: '#ffffcc', fontSize: '1em'}}>Home</Link>
-          </Navbar.Brand>
-          
-          <Nav className="me-auto" >
-            <Nav.Link >
-              <Link to="/Cuisine"style={{textDecoration: 'none', color: '#ffffcc', fontSize: '1em'}}>Cuisine</Link>
-            </Nav.Link>
-          </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      </header>
-   
-      <div className='display'>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/cuisine' element={<Cuisine/>} />
-        </Routes>
-      </div>
+          <Navbar bg="dark" expand="lg" variant="dark">
+            <Container>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Brand href="/">
+                  <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', fontSize: '1em' }}>Home</Link>
+                </Navbar.Brand>
+
+                <Nav className="me-auto" >
+                  <Nav.Link >
+                    <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', fontSize: '1em' }}>Cuisine</Link>
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </header>
+
+        <div className='display'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/cuisine' element={<Cuisine />} />
+            <Route path='/cuisine/:id' element={<ShowCuisine />} />
+          </Routes>
+        </div>
       </Router>;
     </div>
   );
