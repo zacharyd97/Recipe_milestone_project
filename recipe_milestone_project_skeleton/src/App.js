@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
 import './App.css';
 import Home from './components/Home';
-import AddRecipes from './components/AddRecipes';
+import AddRecipes from './components/addRecipes';
 import Cuisine from './components/Cuisine';
 
 
