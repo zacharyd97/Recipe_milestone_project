@@ -4,13 +4,15 @@ import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
 import './App.css';
 import Home from './components/Home';
-import AddRecipes from './components/AddRecipes';
+import AddRecipes from './components/addRecipes';
 import Cuisine from './components/Cuisine';
+import ShowCuisine from './components/ShowCuisine';
 
 
 function App() {
 
   return (
+    <div className="App">
       <Router>
       <div className="App"></div>
         <Navbar bg="dark" expand="sm" variant="dark">
