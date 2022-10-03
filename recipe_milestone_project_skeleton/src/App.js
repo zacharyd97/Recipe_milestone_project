@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
 import './App.css';
 import Home from './components/Home';
+import AddRecipes from './components/AddRecipes';
 import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
 
@@ -21,20 +22,23 @@ function App() {
                 <Navbar.Brand href="/">
                   <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', fontSize: '1em' }}>Home</Link>
                 </Navbar.Brand>
-
                 <Nav className="me-auto" >
                   <Nav.Link >
                     <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', fontSize: '1em' }}>Cuisine</Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link to="/addRecipes">Add Recipes</Link>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
           </Navbar>
-        </header>
+        </header >
 
         <div className='display'>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/addRecipes' element={<AddRecipes />} />
             <Route path='/cuisine' element={<Cuisine />} />
             <Route path='/cuisine/:id' element={<ShowCuisine />} />
           </Routes>
