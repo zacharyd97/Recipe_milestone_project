@@ -33,12 +33,12 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
-    await queryInterface.addConstraint('comments', {
+    await queryInterface.addConstraint('ingredients', {
       fields: ['recipe_id'],
       type: 'foreign key',
       name: 'fk_recipe', // optional
       references: {
-        table: 'recipe',
+        table: 'recipes',
         field: 'recipe_id'
       },
       onDelete: 'cascade'

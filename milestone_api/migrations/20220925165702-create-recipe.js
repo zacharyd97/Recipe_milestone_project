@@ -44,7 +44,7 @@ module.exports = {
       type: 'foreign key',
       name: 'fk_cuisine', // optional
       references: {
-        table: 'cuisine',
+        table: 'cuisines',
         field: 'cuisine_id'
       },
       onDelete: 'cascade'
