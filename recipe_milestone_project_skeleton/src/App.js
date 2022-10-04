@@ -16,26 +16,25 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <header>
-          <Navbar bg="dark" expand="sm" variant="dark">
-            <Container>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Navbar.Brand href="/">
-                  <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Home</Link>
-                </Navbar.Brand>
-                <Nav className="me-auto" >
-                  <Nav.Link >
-                    <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Cuisine</Link>
-                  </Nav.Link>
-                  <Nav.Link>
-                    <Link to="/addRecipes" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Add Recipes</Link>
-                  </Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </header>
+        <Navbar bg="dark" expand="sm" variant="dark">
+          <Container>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Navbar.Brand href="/">
+                <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Home</Link>
+              </Navbar.Brand>
+              <Nav className="me-auto" >
+                <Nav.Link >
+                  <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Cuisine</Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/addRecipes" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Add Recipes</Link>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
 
         <div className='display'>
           <Routes>
