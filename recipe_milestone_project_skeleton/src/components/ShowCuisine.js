@@ -37,7 +37,7 @@ function ShowCuisine() {
             <ul>
                 {recipeMap}
             </ul>
-            <Link to={'/addRecipes'} state={{ cuisine_id: cuisine_id }}>Add Recipe</Link>
+            <Link to={'/addRecipes'} state={{ cuisine_id: cuisine_id }} className="btn btn-primary" >Add Recipe</Link>
         </div>
     )
 }

@@ -29,7 +29,7 @@ function ShowRecipe() {
     let ingredientMap = recipeData.ingredients.map((ingredient) => {
 
         const handleEditIngredient = () => {
-            navigate(`../../ingredient/${ingredient.ingredient_id}`, { state: { ingredient_id: ingredient.ingredient_id } });
+            navigate(`../../ingredient/edit/${ingredient.ingredient_id}`, { state: { ingredient_id: ingredient.ingredient_id } });
         }
 
         const handleDeleteIngredient = async () => {
@@ -59,7 +59,7 @@ function ShowRecipe() {
     })
 
     const handleAddIngredient = () => {
-        navigate(`../../addIngredient/`);
+        navigate(`../../addIngredient/`, { state: { recipe_id: recipeData.recipe_id } });
     }
 
     return (
@@ -78,7 +78,7 @@ function ShowRecipe() {
             <p>{recipeData.description}</p>
             <h3>Comments</h3>
             <ul>{commentMap}</ul>
-            <Link to={`/recipe/edit/${recipeData.recipe_id}`} state={{ recipe_id: recipeData.recipe_id }}>Edit Recipe</Link>
+            <Link to={`/recipe/edit/${recipeData.recipe_id}`} state={{ recipe_id: recipeData.recipe_id }} className="btn btn-primary">Edit Recipe</Link>
         </div>
     )
 }
