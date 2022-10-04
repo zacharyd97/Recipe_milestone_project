@@ -16,37 +16,37 @@ module.exports = {
         recipe_id: 1,
         amount: 1,
         unit: 'lbs',
-        indgredient_name: "Chicken"
+        ingredient_name: "Chicken"
       },
       {
         recipe_id: 1,
         amount: 1,
         unit: 'lbs',
-        indgredient_name: "Noodles"
+        ingredient_name: "Noodles"
       },
       {
         recipe_id: 2,
         amount: 1,
         unit: 'lbs',
-        indgredient_name: "Chicken"
+        ingredient_name: "Chicken"
       },
       {
         recipe_id: 2,
         amount: 1,
         unit: 'lbs',
-        indgredient_name: "Pork"
+        ingredient_name: "Pork"
       },
       {
         recipe_id: 3,
         amount: 1,
         unit: 'lbs',
-        indgredient_name: "Rice"
+        ingredient_name: "Rice"
       },
       {
         recipe_id: 3,
         amount: 3,
         unit: 'cups',
-        indgredient_name: "flour"
+        ingredient_name: "flour"
       },
     ], {})
   },
