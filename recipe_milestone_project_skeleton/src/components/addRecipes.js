@@ -1,16 +1,19 @@
 import { useState } from "react"
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function AddRecipes() {
 
+	const navigate = useNavigate()
+	const location = useLocation()
+	const { cuisine_id } = location.state
 
 	const [recipe, setRecipe] = useState({
 		name: '',
-		recipe_id: '',
 		author: '',
 		image_url: '',
 		decscription: '',
-        directions: '',
-        cuisine_id: ''
+		directions: '',
+		cuisine_id: cuisine_id
 	})
 
 	async function handleSubmit(e) {
@@ -23,6 +26,7 @@ function AddRecipes() {
 			},
 			body: JSON.stringify(recipe)
 		})
+		navigate(`../Cuisine/${cuisine_id}`, { state: { cuisine_id: cuisine_id } })
 	}
 
 	return (
@@ -72,32 +76,12 @@ function AddRecipes() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="state">cuisine_id</label>
-					<input
-						value={recipe.cuisine_id}
-						onChange={e => setRecipe({ ...recipe, cuisine_id: e.target.value })}
-						className="form-control"
-						id="state"
-						name="state"
-					/>
-				</div>
-				<div className="form-group">
 					<label htmlFor="cuisines">directions</label>
 					<input
 						value={recipe.directions}
 						onChange={e => setRecipe({ ...recipe, directions: e.target.value })}
 						className="form-control"
 						id="cuisines" name="cuisines" required />
-				</div>
-                <div className="form-group">
-					<label htmlFor="state">recipe id</label>
-					<input
-						value={recipe.recipe_id}
-						onChange={e => setRecipe({ ...recipe, recipe_id: e.target.value })}
-						className="form-control"
-						id="state"
-						name="state"
-					/>
 				</div>
 				<input className="btn btn-primary" type="submit" value="Add recipe" />
 			</form>

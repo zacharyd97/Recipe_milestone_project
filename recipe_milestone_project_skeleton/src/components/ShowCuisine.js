@@ -27,7 +27,6 @@ function ShowCuisine() {
                 <Link to={`/recipe/${recipe.recipe_id}`} state={{ recipe_id: recipe.recipe_id }}>
                     <img src={recipe.image_url} alt='dog' />
                 </Link>
-
             </div>
         )
     })
@@ -36,6 +35,7 @@ function ShowCuisine() {
         <div>
             <p>{data.cuisine_name}</p>
             {recipeMap}
+            <Link to={'/addRecipes'} state={{ cuisine_id: cuisine_id }}>Add Recipe</Link>
         </div>
     )
 }

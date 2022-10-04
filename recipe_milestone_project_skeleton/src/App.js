@@ -7,6 +7,7 @@ import Home from './components/Home';
 import AddRecipes from './components/addRecipes';
 import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
+import ShowRecipe from './components/ShowRecipe';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path='/addRecipes' element={<AddRecipes />} />
             <Route path='/cuisine' element={<Cuisine />} />
             <Route path='/cuisine/:id' element={<ShowCuisine />} />
+            <Route path='/recipe/:id' element={<ShowRecipe />} />
           </Routes>
         </div>
       </Router>;
