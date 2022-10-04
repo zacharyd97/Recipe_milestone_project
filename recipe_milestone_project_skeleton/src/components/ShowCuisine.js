@@ -33,7 +33,7 @@ function ShowCuisine() {
 
     return (
         <div>
-            <p>{data.cuisine_name}</p>
+            <h1>{data.cuisine_name}</h1>
             <ul>
                 {recipeMap}
             </ul>

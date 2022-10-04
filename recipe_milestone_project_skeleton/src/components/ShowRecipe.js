@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { useLocation, Link } from "react-router-dom"
+import { useLocation, Link, useNavigate } from "react-router-dom"
 
 function ShowRecipe() {
 
+    const navigate = useNavigate()
     const location = useLocation()
     const { recipe_id } = location.state
     const [recipeData, setRecipeData] = useState({
@@ -27,9 +28,21 @@ function ShowRecipe() {
 
     let ingredientMap = recipeData.ingredients.map((ingredient) => {
 
+        const handleEditIngredient = () => {
+            navigate(`../../ingredient/${ingredient.ingredient_id}`, { state: { ingredient_id: ingredient.ingredient_id } });
+        }
+
+        const handleDeleteIngredient = async () => {
+            await fetch(`http://localhost:5000/ingredient/${ingredient.ingredient_id}`, {
+                method: 'DELETE'
+            })
+            console.log('Delete Successful')
+        }
         return (
             <li key={`RecipeRouter${ingredient.ingredient_id}`} className="col-sm-6">
                 <p>{`${ingredient.amount} ${ingredient.unit} of ${ingredient.ingredient_name}`}</p>
+                <button className="btn btn-primary" onClick={handleEditIngredient}>Edit Ingredient</button>
+                <button className="btn btn-danger" onClick={handleDeleteIngredient}>Delete Ingredient</button>
             </li>
         )
     })
@@ -45,13 +58,20 @@ function ShowRecipe() {
         )
     })
 
+    const handleAddIngredient = () => {
+        navigate(`../../addIngredient/`);
+    }
+
     return (
         <div>
             <img src={recipeData.image_url} alt="food"></img>
             <h1>{recipeData.name}</h1>
             <h2>Created by {recipeData.author}</h2>
             <h3>Ingredients</h3>
-            <ul>{ingredientMap}</ul>
+            <div>
+                <ul>{ingredientMap}</ul>
+                <button className="btn btn-primary" onClick={handleAddIngredient}>Add Ingredient</button>
+            </div>
             <h3>Directions:</h3>
             <p>{recipeData.directions}</p>
             <h3>Description:</h3>
