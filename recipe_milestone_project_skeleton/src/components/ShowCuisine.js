@@ -22,19 +22,21 @@ function ShowCuisine() {
     let recipeMap = recipes.map((recipe) => {
 
         return (
-            <div key={`RecipeRouter${recipe.recipe_id}`} className="col-sm-6">
+            <li key={`RecipeRouter${recipe.recipe_id}`} className="col-sm-6">
                 <p>{recipe.name}</p>
                 <Link to={`/recipe/${recipe.recipe_id}`} state={{ recipe_id: recipe.recipe_id }}>
                     <img src={recipe.image_url} alt='dog' />
                 </Link>
-            </div>
+            </li>
         )
     })
 
     return (
         <div>
             <p>{data.cuisine_name}</p>
-            {recipeMap}
+            <ul>
+                {recipeMap}
+            </ul>
             <Link to={'/addRecipes'} state={{ cuisine_id: cuisine_id }}>Add Recipe</Link>
         </div>
     )

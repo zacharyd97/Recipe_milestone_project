@@ -45,11 +45,11 @@ function AddRecipes() {
 					/>
 				</div>
 				<div className="form-group">
-					<label htmlFor="founded">decsription</label>
+					<label htmlFor="founded">desription</label>
 					<input
 						required
-						value={recipe.decscription}
-						onChange={e => setRecipe({ ...recipe, decscription: e.target.value })}
+						value={recipe.description}
+						onChange={e => setRecipe({ ...recipe, description: e.target.value })}
 						className="form-control"
 						id="founded"
 						name="founded"

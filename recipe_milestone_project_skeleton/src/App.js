@@ -8,6 +8,7 @@ import AddRecipes from './components/addRecipes';
 import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
 import ShowRecipe from './components/ShowRecipe';
+import EditRecipe from './components/editRecipes';
 
 export default App;
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path='/cuisine' element={<Cuisine />} />
             <Route path='/cuisine/:id' element={<ShowCuisine />} />
             <Route path='/recipe/:id' element={<ShowRecipe />} />
+            <Route path='/recipe/edit/:id' element={<EditRecipe />} />
           </Routes>
         </div>
       </Router>
