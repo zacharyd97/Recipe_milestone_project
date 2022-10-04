@@ -9,32 +9,32 @@ import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
 import ShowRecipe from './components/ShowRecipe';
 
-
+export default App;
 function App() {
 
   return (
     <div className="App">
       <Router>
         <header>
-          <Navbar bg="dark" expand="lg" variant="dark">
+          <Navbar bg="dark" expand="sm" variant="dark">
             <Container>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Collapse id="responsive-navbar-nav">
                 <Navbar.Brand href="/">
-                  <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', fontSize: '1em' }}>Home</Link>
+                  <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Home</Link>
                 </Navbar.Brand>
                 <Nav className="me-auto" >
                   <Nav.Link >
-                    <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', fontSize: '1em' }}>Cuisine</Link>
+                    <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Cuisine</Link>
                   </Nav.Link>
                   <Nav.Link>
-                    <Link to="/addRecipes">Add Recipes</Link>
+                    <Link to="/addRecipes" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Add Recipes</Link>
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>
             </Container>
           </Navbar>
-        </header >
+        </header>
 
         <div className='display'>
           <Routes>
@@ -45,9 +45,23 @@ function App() {
             <Route path='/recipe/:id' element={<ShowRecipe />} />
           </Routes>
         </div>
-      </Router>;
+      </Router>
     </div>
   );
-}
 
-export default App;
+<<<<<<< HEAD
+  <div className='display'>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/addRecipes' element={<AddRecipes />} />
+      <Route path='/cuisine' element={<Cuisine />} />
+      <Route path='/cuisine/:id' element={<ShowCuisine />} />
+      <Route path='/recipe/:id' element={<ShowRecipe />} />
+    </Routes>
+  </div>
+      </Router >;
+    </div >
+  );
+=======
+>>>>>>> 362e6f920ce35b44dbb906947ac2cab6942169b0
+}
