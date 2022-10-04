@@ -39,6 +39,16 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    await queryInterface.addConstraint('recipes', {
+      fields: ['cuisine_id'],
+      type: 'foreign key',
+      name: 'fk_cuisine', // optional
+      references: {
+        table: 'cuisine',
+        field: 'cuisine_id'
+      },
+      onDelete: 'cascade'
+    });
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('recipes');
