@@ -3,10 +3,12 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
 import './App.css';
-import Recipes from './components/Recipes';
 import Home from './components/Home';
+import AddRecipes from './components/addRecipes';
+import Cuisine from './components/Cuisine';
+import ShowCuisine from './components/ShowCuisine';
 
-
+export default App;
 function App() {
 
   return (
@@ -45,5 +47,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
