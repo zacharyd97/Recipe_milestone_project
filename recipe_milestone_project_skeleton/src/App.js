@@ -48,20 +48,4 @@ function App() {
       </Router>
     </div>
   );
-
-<<<<<<< HEAD
-  <div className='display'>
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/addRecipes' element={<AddRecipes />} />
-      <Route path='/cuisine' element={<Cuisine />} />
-      <Route path='/cuisine/:id' element={<ShowCuisine />} />
-      <Route path='/recipe/:id' element={<ShowRecipe />} />
-    </Routes>
-  </div>
-      </Router >;
-    </div >
-  );
-=======
->>>>>>> 362e6f920ce35b44dbb906947ac2cab6942169b0
 }
