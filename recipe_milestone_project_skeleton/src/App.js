@@ -12,34 +12,36 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <header>
-      <Navbar bg="dark" expand="lg" variant="dark">
-        <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Navbar.Brand href="/">
-            <Link to="/">Home</Link>
-          </Navbar.Brand>
-          
-          <Nav className="me-auto" >
-            <Nav.Link >
-              <Link to="/Recipes">Recipes</Link>
-            </Nav.Link>
-          </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      </header>
-   
-        
-       
-      <div className='display'>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/Recipes' element={<Recipes/>} />
-        </Routes>
-      </div>
-      </Router>;
+        <div className="App"></div>
+        <Navbar bg="dark" expand="sm" variant="dark">
+          <Container>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Navbar.Brand href="/">
+                <Link to="/" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Home</Link>
+              </Navbar.Brand>
+              <Nav className="me-auto" >
+                <Nav.Link >
+                  <Link to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Cuisine</Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/addRecipes" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Add Recipes</Link>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+
+        <div className='display'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/addRecipes' element={<AddRecipes />} />
+            <Route path='/cuisine' element={<Cuisine />} />
+            <Route path='/cuisine/:id' element={<ShowCuisine />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
