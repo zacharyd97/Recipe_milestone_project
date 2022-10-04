@@ -7,6 +7,8 @@ import Home from './components/Home';
 import AddRecipes from './components/addRecipes';
 import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
+import ShowRecipe from './components/ShowRecipe';
+import EditRecipe from './components/editRecipes';
 
 export default App;
 function App() {
@@ -14,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="App"></div>
         <Navbar bg="dark" expand="sm" variant="dark">
           <Container>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -41,6 +42,8 @@ function App() {
             <Route path='/addRecipes' element={<AddRecipes />} />
             <Route path='/cuisine' element={<Cuisine />} />
             <Route path='/cuisine/:id' element={<ShowCuisine />} />
+            <Route path='/recipe/:id' element={<ShowRecipe />} />
+            <Route path='/recipe/edit/:id' element={<EditRecipe />} />
           </Routes>
         </div>
       </Router>

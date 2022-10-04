@@ -18,19 +18,21 @@ function Cuisine() {
   let cuisineMap = cuisine.map((cuisine) => {
 
     return (
-      <div key={`CusineRouter${cuisine.cuisine_id}`} className="col-sm-6">
+      <li key={`CusineRouter${cuisine.cuisine_id}`} className="col-sm-6">
         <p>{cuisine.cuisine_name}</p>
         <Link to={`/cuisine/${cuisine.cuisine_id}`} state={{ cuisine_id: cuisine.cuisine_id }}>
           <img src={cuisine.image_url} alt='dog' />
         </Link>
-
-      </div>
+      </li>
     )
   })
   return (
     <div>
       <h1>index page</h1>
-      {cuisineMap}
+      <ul>
+        {cuisineMap}
+      </ul>
+
     </div>
   )
 }
