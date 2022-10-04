@@ -40,7 +40,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/addRecipes' element={<AddRecipes />} />
             <Route path='/cuisine' element={<Cuisine />} />
-            <Route path='/cuisine' element={<ShowCuisine />} />
+            <Route path='/cuisine/:id' element={<ShowCuisine />} />
           </Routes>
         </div>
       </Router>
