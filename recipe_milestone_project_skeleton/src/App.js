@@ -27,9 +27,9 @@ function App() {
                 <Nav.Link >
                   <Link className='navLink' to="/Cuisine" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Cuisine</Link>
                 </Nav.Link>
-                <Nav.Link>
+                {/* <Nav.Link>
                   <Link className='navLink' to="/addRecipes" style={{ textDecoration: 'none', color: '#ffffcc', display: 'inline-block', fontSize: '1.2em', textTransform: 'uppercase', padding: '5px', textAlign: 'left', borderRadius: '15%' }}>Add Recipes</Link>
-                </Nav.Link>
+                </Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Container>
