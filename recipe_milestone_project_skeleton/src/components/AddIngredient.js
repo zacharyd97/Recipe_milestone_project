@@ -33,6 +33,7 @@ function AddIngredient() {
                 <div className="form-group">
                     <label htmlFor="name">amount</label>
                     <input
+                        type="number"
                         required
                         value={ingredientData.amount}
                         onChange={e => setIngredientData({ ...ingredientData, amount: e.target.value })}

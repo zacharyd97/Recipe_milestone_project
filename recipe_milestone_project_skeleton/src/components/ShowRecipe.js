@@ -37,6 +37,12 @@ function ShowRecipe() {
                 method: 'DELETE'
             })
             console.log('Delete Successful')
+            const fetchData = async () => {
+                const response = await fetch(`http://localhost:5000/recipe/${recipe_id}`)
+                const resData = await response.json()
+                setRecipeData(resData)
+            }
+            fetchData()
         }
         return (
             <li key={`RecipeRouter${ingredient.ingredient_id}`} className="col-sm-6">

@@ -5,9 +5,9 @@ function EditIngredient() {
 
     const navigate = useNavigate()
     const location = useLocation()
-    const { recipe_id } = location.state
+    const { ingredient_id } = location.state
     const [ingredientData, setIngredientData] = useState({
-        recipe_id: recipe_id,
+        recipe_id: '',
         amount: '',
         unit: '',
         ingredient_name: ''
@@ -16,24 +16,24 @@ function EditIngredient() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        await fetch(`http://localhost:5000/ingredient`, {
+        await fetch(`http://localhost:5000/ingredient/${ingredient_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(ingredientData)
         })
-        navigate(`../recipe/${recipe_id}`, { state: { recipe_id: ingredientData.recipe_id } })
+        navigate(`../recipe/${ingredientData.recipe_id}`, { state: { recipe_id: ingredientData.recipe_id } })
     }
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`http://localhost:5000/ingredient/${ingredientData.ingredient_id}`)
+            const response = await fetch(`http://localhost:5000/ingredient/${ingredient_id}`)
             const resData = await response.json()
             setIngredientData(resData)
         }
         fetchData()
-    }, [ingredientData.ingredient_id])
+    }, [ingredient_id])
     console.log(ingredientData)
 
     return (
@@ -72,7 +72,7 @@ function EditIngredient() {
                         name="pic"
                     />
                 </div>
-                <input className="btn btn-primary" type="submit" value='Add ingredient' />
+                <input className="btn btn-primary" type="submit" value='Edit ingredient' />
             </form>
         </main>
     )
