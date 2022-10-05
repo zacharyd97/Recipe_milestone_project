@@ -1,7 +1,7 @@
 function Home() {
     return (
         <div className="Home">
-          <h1>Tastes of Home</h1>
+          <img src="https://www.flickr.com/photos/194198779@N06/52405516875/in/dateposted/" alt="brand logo" />
         </div>
        
         
