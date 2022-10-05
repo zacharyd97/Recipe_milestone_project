@@ -33,11 +33,11 @@ function ShowCuisine() {
 
     return (
         <div>
-            <p>{data.cuisine_name}</p>
+            <h1>{data.cuisine_name}</h1>
             <ul>
                 {recipeMap}
             </ul>
-            <Link to={'/addRecipes'} state={{ cuisine_id: cuisine_id }}>Add Recipe</Link>
+            <Link to={'/addRecipes'} state={{ cuisine_id: cuisine_id }} className="btn btn-primary" >Add Recipe</Link>
         </div>
     )
 }

@@ -30,14 +30,40 @@ function EditRecipe() {
     }, [recipe_id])
     console.log(recipeData)
 
-    let ingredientMap = recipeData.ingredients.map((ingredient) => {
-
-        return (
-            <li key={`RecipeRouter${ingredient.ingredient_id}`} className="col-sm-6">
-                <p>{`${ingredient.amount} ${ingredient.unit} of ${ingredient.ingredient_name}`}</p>
-            </li>
-        )
-    })
+    // let ingredientMap = recipeData.ingredients.map((ingredient, index) => {
+    //     return (
+    //         <div className="form-group">
+    //             <h5>{ingredient.ingredient_name}</h5>
+    //             <label htmlFor={`ingredientAmount${ingredient.ingredient_id}`}>Amount</label>
+    //             <input
+    //                 required
+    //                 value={ingredient.amount}
+    //                 onChange={e => setRecipeData({ ...recipeData.ingredients[index], amount: e.target.value })}
+    //                 className="form-control"
+    //                 id={`ingredientAmount${ingredient.ingredient_id}`}
+    //                 name={`ingredientAmount${ingredient.ingredient_id}`}
+    //             />
+    //             <label htmlFor={`ingredientUnit${ingredient.ingredient_id}`}>Unit</label>
+    //             <input
+    //                 required
+    //                 value={ingredient.unit}
+    //                 onChange={e => setRecipeData({ ...recipeData.ingredients[index], unit: e.target.value })}
+    //                 className="form-control"
+    //                 id={`ingredientAmount${ingredient.ingredient_id}`}
+    //                 name={`ingredientAmount${ingredient.ingredient_id}`}
+    //             />
+    //             <label htmlFor={`ingredientName${ingredient.ingredient_id}`}>Name</label>
+    //             <input
+    //                 required
+    //                 value={ingredient.ingredient_name}
+    //                 onChange={e => setRecipeData({ ...recipeData.ingredients[index], amount: e.target.value })}
+    //                 className="form-control"
+    //                 id={`ingredientAmount${ingredient.ingredient_id}`}
+    //                 name={`ingredientAmount${ingredient.ingredient_id}`}
+    //             />
+    //         </div>
+    //     )
+    // })
 
     let commentMap = recipeData.comments.map((comment) => {
 

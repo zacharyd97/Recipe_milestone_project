@@ -9,6 +9,8 @@ import Cuisine from './components/Cuisine';
 import ShowCuisine from './components/ShowCuisine';
 import ShowRecipe from './components/ShowRecipe';
 import EditRecipe from './components/editRecipes';
+import AddIngredient from './components/AddIngredient';
+import EditIngredient from './components/EditIngredient';
 
 export default App;
 function App() {
@@ -40,10 +42,12 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/addRecipes' element={<AddRecipes />} />
+            <Route path='/addIngredient' element={<AddIngredient />} />
             <Route path='/cuisine' element={<Cuisine />} />
             <Route path='/cuisine/:id' element={<ShowCuisine />} />
             <Route path='/recipe/:id' element={<ShowRecipe />} />
             <Route path='/recipe/edit/:id' element={<EditRecipe />} />
+            <Route path='/ingredient/edit/:id' element={<EditIngredient />} />
           </Routes>
         </div>
       </Router>
