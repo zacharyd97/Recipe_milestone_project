@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 a {
   /* background-color: #003300; */
   text-decoration: none;
@@ -13,8 +17,6 @@ a:active{
   background-color: #666633;
 }
 .Home {
-  background-image: linear-gradient(rgb(33, 36, 41), rgba(0, 51, 0, 0.39)),
-  url("https://images.unsplash.com/photo-1663353668307-06d9c49094ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=755&q=80");
   /* background-color: #003300; */
   background-size: cover;
   color: #ffffcc;
